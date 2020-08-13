@@ -12,7 +12,7 @@ const (
 )
 
 func ParseRFC3339TimeYYMMDDHHMMSS(t string) string {
-	//2006-01-02T15:04:05Z07:00 --> 2006-01-02 15:04:05
+	//2006-01-02T15:04:05+08:00--> 2006-01-02 15:04:05
 	newTime, err := time.Parse(time.RFC3339, t)
 	if err != nil {
 		log.Println(err.Error())
@@ -22,7 +22,7 @@ func ParseRFC3339TimeYYMMDDHHMMSS(t string) string {
 }
 
 func ParseRFC3339TimeYYMMDD(t string) string {
-	//2006-01-02T15:04:05Z07:00 --> 2006-01-02
+	//2006-01-02T15:04:05+08:00--> 2006-01-02
 	newTime, err := time.Parse(time.RFC3339, t)
 	if err != nil {
 		log.Println(err.Error())
@@ -32,7 +32,7 @@ func ParseRFC3339TimeYYMMDD(t string) string {
 }
 
 func ParseRFC3339TimeHHMMSS(t string) string {
-	//2006-01-02T15:04:05Z07:00 --> 15:04:05
+	//2006-01-02T15:04:05+08:00--> 15:04:05
 	newTime, err := time.Parse(time.RFC3339, t)
 	if err != nil {
 		log.Println(err.Error())
